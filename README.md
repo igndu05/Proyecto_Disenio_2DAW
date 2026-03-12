@@ -51,36 +51,6 @@ Las tecnologías utilizadas en el desarrollo del proyecto incluyen:
 
 ---
 
-## 📂 Estructura del proyecto
-retrogroove/
-│
-├── index.html # Página principal
-├── login.html # Página de inicio de sesión
-├── registro.html # Registro de usuario
-├── catalogo.html # Catálogo de discos
-├── producto.html # Vista individual de producto
-├── carrito.html # Carrito de compra
-├── pago.html # Pasarela de pago
-│
-├── css/ # Archivos de estilos
-│ ├── styles.css
-│ └── responsive.css
-│
-├── js/ # Scripts de JavaScript
-│ ├── main.js
-│ ├── carrito.js
-│ └── login.js
-│
-├── img/ # Imágenes del sitio
-│ ├── productos/
-│ └── logo/
-│
-├── assets/ # Recursos adicionales
-│ ├── icons/
-│ └── fonts/
-│
-└── README.md # Documentación del proyecto
-
 ## 🚀 Posibles mejoras futuras
 
 - Sistema de registro completo de usuarios
