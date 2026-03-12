@@ -94,7 +94,7 @@ footer {
     }
 
     >.contact {
-        padding: 16px 80px;
+        padding: 16px 60px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -129,7 +129,7 @@ footer {
         padding: 16px 12px;
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 36px;
         justify-content: space-between;
         align-items: center;
