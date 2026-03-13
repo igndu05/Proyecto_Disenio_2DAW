@@ -29,6 +29,7 @@ header {
 
         >a {
             cursor: pointer;
+
             >img {
                 display: block;
                 object-fit: cover;
@@ -37,7 +38,74 @@ header {
     }
 }
 
+main>h2 {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
 
+.form {
+    >form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 36px;
+        width: 70%;
+        margin: auto;
+
+        .username,
+        .passwd {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            > label {
+                font-size: 20px;
+            }
+
+            > input {
+                padding: 10px;
+            }
+
+             >a {
+                font-weight: 300;
+                text-decoration: none;
+                color: #7A00C7;
+            }
+
+            >a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .login, .createAccount {
+            text-decoration: none;
+            color:white;
+            padding: 20px;
+            width: 100%;
+
+            > p {
+                text-align: center;
+            }
+        }
+
+        .login {
+            background-color: #4E458C;
+        }
+
+        .createAccount {
+            background-color: #7A00C7;
+        }
+
+        .createAccount-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+}
 
 footer {
     display: flex;
