@@ -15,6 +15,14 @@ header {
     justify-content: space-between;
     padding: 0 16px;
 
+    >a {
+        >img {
+            width: 120px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
     >img {
         width: 120px;
         display: block;
@@ -59,15 +67,15 @@ main>h2 {
             flex-direction: column;
             gap: 12px;
 
-            > label {
+            >label {
                 font-size: 20px;
             }
 
-            > input {
+            >input {
                 padding: 10px;
             }
 
-             >a {
+            >a {
                 font-weight: 300;
                 text-decoration: none;
                 color: #7A00C7;
@@ -79,13 +87,14 @@ main>h2 {
             }
         }
 
-        .login, .createAccount {
+        .login,
+        .createAccount {
             text-decoration: none;
-            color:white;
+            color: white;
             padding: 20px;
             width: 100%;
 
-            > p {
+            >p {
                 text-align: center;
             }
         }
@@ -112,7 +121,7 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     background-color: #8BE9FF;
-    margin-top: 150px;
+    margin-top: 120px;
 
     >.social-media {
         padding: 16px 90px;
