@@ -15,6 +15,14 @@ header {
     justify-content: space-between;
     padding: 0 16px;
 
+    >a {
+        >img {
+            width: 120px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
     >img {
         width: 120px;
         display: block;
@@ -29,12 +37,102 @@ header {
 
         >a {
             cursor: pointer;
+
             >img {
                 display: block;
                 object-fit: cover;
             }
         }
     }
+}
+
+main > h2 {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.form {
+    >form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 36px;
+        width: 70%;
+        margin: auto;
+
+        .name,
+        .email,
+        .username,
+        .passwd {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            >label {
+                font-size: 20px;
+            }
+
+            >input {
+                padding: 10px;
+            }
+
+            >a {
+                font-weight: 300;
+                text-decoration: none;
+                color: #7A00C7;
+            }
+
+            >a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .phone {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            >label {
+                font-size: 20px;
+            }
+
+            >input {
+                padding: 10px;
+            }
+
+            >.phone-wrapper{
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 10px;
+                > select, input {
+                    padding: 10px;
+                }
+                
+                > input {
+                    flex: 1;
+                }
+            }
+        }
+
+        
+
+        .login {
+            background-color: #7A00C7;
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            width: 100%;
+
+            >p {
+                text-align: center;
+            }
+        }
+
+        
+    }
+
 }
 
 .last-added,
@@ -45,6 +143,11 @@ header {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
+
+    > img {
+        width: 70%;
+        margin: auto;
+    }
 }
 
 .about-us {
@@ -74,7 +177,7 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     background-color: #8BE9FF;
-    margin-top: 150px;
+    margin-top: 120px;
 
     >.social-media {
         padding: 16px 90px;
