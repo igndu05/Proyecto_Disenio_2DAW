@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de búsqueda</title>
+    <title>Menú de búsqueda (filtro)</title>
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../images/Icono_principal.png">
@@ -26,11 +26,22 @@
         <div class="search-container">
             <div class="filter-search">
                 <h4>Filtrar</h4>
-                <a href="../search_page_filtered/index.html">
+                <a href="../search_page/index.html">
                     <img src="../../icons/filter-icon.svg" alt="filtro-icono"/>
                 </a>
             </div>
             <input type="text" name="search" id="search" placeholder="¿Qué buscas?"/>
+        </div>
+        <div class="filters">
+            <div class="filter"><input type="checkbox" name="bandas-sonoras" id="bandas-sonoras"/><label for="bandas-sonoras">Bandas sonoras</label></div>
+            <div class="filter"><input type="checkbox" name="jazz" id="jazz"/><label for="jazz">Jazz</label></div>
+            <div class="filter"><input type="checkbox" name="punkrock" id="punkrock"/><label for="punkrock">Punkrock</label></div>
+            <div class="filter"><input type="checkbox" name="pop" id="pop"/><label for="pop">Pop</label></div>
+            <div class="filter"><input type="checkbox" name="j-rock" id="j-rock"/><label for="j-rock">J-Rock</label></div>
+            <div class="filter"><input type="checkbox" name="reggae" id="reggae"/><label for="reggae">Reggae</label></div>
+            <div class="filter"><input type="checkbox" name="rock" id="rock"/><label for="rock">Rock</label></div>
+            <div class="filter"><input type="checkbox" name="heavy-metal" id="heavy-metal"/><label for="heavy-metal">Heavy Metal</label></div>
+            <div class="filter"><input type="checkbox" name="Hardstyle" id="Hardstyle"/><label for="Hardstyle">Hardstyle</label></div>
         </div>
         <div class="search-products-container">
             <img src="../../images/Display_disc.webp" alt="disco de ejemplo"/>
