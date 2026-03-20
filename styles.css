@@ -64,7 +64,10 @@ main > h2 {
         .name,
         .email,
         .username,
-        .passwd {
+        .passwd,
+        .full-name,
+        .needed-services,
+        .message {
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -73,8 +76,12 @@ main > h2 {
                 font-size: 20px;
             }
 
-            >input {
+            >input, >select {
                 padding: 10px;
+            }
+
+            >textarea {
+                height: 120px;
             }
 
             >a {
@@ -160,6 +167,20 @@ main > h2 {
         font-size: 13;
         font-weight: 300;
     }
+
+    >a {
+        text-decoration: none;
+        color: #7A00C7;
+    }
+
+    >a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.contact-us {
+    margin: 50px 36px;
 
     >a {
         text-decoration: none;
