@@ -29,15 +29,15 @@
         <div class="form">
             <form action="#" method="post">
                 <div class="full-name">
-                    <label for="name">Nombre completo:</label>
+                    <label for="name">Nombre completo: <span style="color: red;">*</span></label>
                     <input type="text" name="name" id="name" />
                 </div>
                 <div class="email">
-                    <label for="email">Correo electrónico:</label>
+                    <label for="email">Correo electrónico: <span style="color: red;">*</span></label>
                     <input type="text" name="email" id="email" />
                 </div>
                 <div class="phone">
-                    <label for="phone">Número de teléfono:</label>
+                    <label for="phone">Número de teléfono: <span style="color: red;">*</span></label>
                     <div class="phone-wrapper">
                         <select name="country">
                             <option value="esp">ESP</option>
@@ -50,6 +50,8 @@
                     <label for="services">Servicios necesitados:</label>
                     <select name="service">
                         <option value="page-error">Error en la página</option>
+                        <option value="page-slowed">Gran tiempo de espera para recargar la pagina</option>
+                        <option value="refund">Devolución de pedido</option>
                     </select>
                 </div>
                 <div class="message">
