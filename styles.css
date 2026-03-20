@@ -219,6 +219,26 @@ main > h2 {
         }
 }
 
+main > .search-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 40px 30px 0 30px;
+
+    >.filter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    > input {
+        flex: 1;
+        padding: 10px;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 20px;
+    }
+}
+
 footer {
     display: flex;
     flex-direction: column;
