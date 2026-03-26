@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de pago</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/Icono_principal.png">
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <img src="../../icons/logo-icon.svg" alt="icono-logo" />
+        </a>
+        <div class="icons-header">
+            <a href="../../pages/search_page/index.html">
+                <img src="../../icons/search-icon.svg" alt="icono-busqueda" />
+            </a>
+            <img src="../../icons/shopping-cart.svg" alt="icono-carrito" />
+            <a href="../../pages/login_page/index.html">
+                <img src="../../icons/profile-icon.svg" alt="icono-perfil" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="payment-form">
+            <h2>Datos de envio</h2>
+            <form action="#" method="post">
+                <div class="full-name">
+                    <label for="full-name">Nombre y apellidos: <span style="color: red;">*</span></label>
+                    <input type="text" name="full-name" id="full-name"/>
+                </div>
+                <div class="address">
+                    <label for="address">Dirección: <span style="color: red;">*</span></label>
+                    <input type="text" name="address" id="address"/>
+                </div>
+                <div class="post-code">
+                    <label for="post-code">Código postal: <span style="color: red;">*</span></label>
+                    <input type="text" name="post-code" id="post-code"/>
+                </div>
+                <div class="city">
+                    <label for="city">Ciudad: <span style="color: red;">*</span></label>
+                    <input type="text" name="city" id="city"/>
+                </div>
+                <div class="province">
+                    <label for="province">Provincia: <span style="color: red;">*</span></label>
+                    <input type="text" name="province" id="province"/>
+                </div>
+                <div class="community">
+                    <label for="community">Comunidad autónoma: <span style="color: red;">*</span></label>
+                    <input type="text" name="community" id="community"/>
+                </div>
+                 <div class="phone">
+                    <label for="phone">Teléfono de contacto: <span style="color: red;">*</span></label>
+                    <input type="text" name="phone" id="phone"/>
+                </div>
+                 <div class="mail">
+                    <label for="mail">Correo electrónico: <span style="color: red;">*</span></label>
+                    <input type="text" name="mail" id="mail"/>
+                </div>
+            </form>
+        </div>
+        <div class="order-details">
+            <h2>Detalles del pedido</h2>
+            <ul>
+                <li>Producto 1 (precio)</li>
+                <li>Producto 2 (precio)</li>
+                <li>Producto 3 (precio)</li>
+                <li>Producto 4 (precio)</li>
+            </ul>
+            <p class="total-price">Total: 78.98&euro;</p>
+        </div>
+        <div class="pay-method">
+            <h2>Método de pago</h2>
+            <div class="pay-options">
+                <img src="../../images/Bizum 1.svg" alt="imagen Bizum"/>
+                <div class="vl"></div>
+                <a href="#">
+                    <img src="../../images/db972633301187368f9e36e722375b33-icono-de-tarjeta-de-credito 1.svg" alt="Tarjeta"/>
+                </a>
+            </div>
+            <div class="card-form">
+                <form action="#" method="post">
+                    <div class="card-number">
+                        <label for="card-number">Número de tarjeta: <span style="color: red;">*</span></label>
+                        <input type="text" name="card-number" id="card-number"/>
+                    </div>
+                    <div class="caducity_cvv">
+                        <div class="caducity-date">
+                            <label for="caducity-date">Fecha de caducidad: <span style="color: red;">*</span></label>
+                            <input type="text" name="caducity-date" id="caducity-date"/>
+                        </div>
+                        <div class="cvv">
+                            <label for="cvv">CVV: <span style="color: red;">*</span></label>
+                            <input type="text" name="cvv" id="cvv"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="confirm-payment">
+            <a href="../payment_completed/index.html">CONFIRMAR PAGO</a>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media">
+            <p>Nuestras redes sociales</p>
+            <div class="icons-social-media">
+                <img src="../../icons/Youtube-icon.svg" alt="icono-youtube">
+                <img src="../../icons/Twitter-icon.svg" alt="icono-twitter">
+                <img src="../../icons/TikTok-icon.svg" alt="icono-tiktok">
+                <img src="../../icons/Facebook-icon.svg" alt="icono-facebook">
+            </div>
+        </div>
+        <div class="contact">
+            <p>Contactanos</p>
+            <div class="mail">
+                <p>Correo electrónico:</p>
+                <a href="#">inforetrogroove@info.es</a>
+            </div>
+            <div class="phone">
+                <p>Número de teléfono:</p>
+                <a href="#">+34 000 11 22 33</a>
+            </div>
+        </div>
+        <div class="conditions">
+            <a href="#">Condiciones de uso y venta</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Area legal</a>
+            <a href="#">Cookies</a>
+            <a href="#">Publicidad basada en intereses</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
+        </div>
+    </footer>
+</body>
+
+</html>
