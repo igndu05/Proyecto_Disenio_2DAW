@@ -8,11 +8,49 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/Icono_principal.png">
+    <script src="jq/jquery-4.0.0.js"></script>
+    <script>
+        $(function () {
+
+            $("#menu-button").on("click", function () {
+
+                $("#menu-toggle").prop(
+                    "checked",
+                    !$("#menu-toggle").prop("checked")
+                );
+
+                $("#menuHamburguesa").toggleClass("active");
+
+            });
+
+            $("a").hover(
+                function () {
+                    $(this).css({
+                        "text-decoration": "underline",
+                        "cursor": "pointer"
+                    });
+                },
+                function () {
+                    $(this).css({
+                        "text-decoration": "none"
+                    });
+                }
+            );
+
+        });
+
+
+    </script>
 </head>
 
 <body>
     <header>
-        <img src="./icons/logo-icon.svg" alt="icono-logo" />
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle">
+            <img src="./icons/logo-icon.svg" alt="icono-logo" id="menu-button">
+        </label>
+
         <div class="icons-header">
             <a href="./pages/search_page/index.html">
                 <img src="./icons/search-icon.svg" alt="icono-busqueda" />
@@ -23,24 +61,32 @@
             </a>
         </div>
     </header>
+
+    <nav id="menuHamburguesa" class="menu">
+        <a href="/">ULTIMOS LANZAMIENTOS</a>
+        <a href="/">TOP SELLERS</a>
+        <a href="/">¡EN OFERTA!</a>
+        <a href="/">SOBRE NOSOTROS</a>
+    </nav>
+
     <main>
         <div class="last-added">
             <h2>Ultimos lanzamientos</h2>
             <a href="./pages/product_details/index.html">
-                <img src="./images/Display_disc.webp" alt="disco ejemplo"/>
+                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo" />
             </a>
-            
+
         </div>
         <div class="top-seller">
             <h2>Nuestro top ventas</h2>
             <a href="./pages/product_details/index.html">
-                <img src="./images/Display_disc.webp" alt="disco ejemplo"/>
+                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo" />
             </a>
         </div>
         <div class="offers">
             <h2>¡En oferta!</h2>
             <a href="./pages/product_details/index.html">
-                <img src="./images/Display_disc.webp" alt="disco ejemplo"/>
+                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo" />
             </a>
         </div>
         <div class="about-us">
@@ -75,7 +121,7 @@
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-             <div class="phone">
+            <div class="phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
@@ -92,4 +138,5 @@
         </div>
     </footer>
 </body>
+
 </html>

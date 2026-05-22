@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../images/Icono_principal.png">
+    <script src="../../jq/jquery-4.0.0.js"></script>
+    <script>
+        $(function () {
+            $(".mail > a, .phone > a, .conditions > a").hover(
+                function () {
+                    $(this).css({
+                        "text-decoration": "underline",
+                        "cursor": "pointer"
+                    });
+                },
+                function () {
+                    $(this).css({
+                        "text-decoration": "none"
+                    });
+                }
+            );
+            
+            $("input, textarea").on("focusin", function(){
+                $(this).css("border", "3px solid lightgreen")
+            })
+
+            $("input, textarea").on("focusout", function(){
+                $(this).css("border", "1px solid black")
+            })
+        });
+
+
+    </script>
 </head>
 
 <body>

@@ -43,6 +43,37 @@ header {
     }
 }
 
+#menu-toggle{
+    display:none;
+}
+
+#menu-button{
+    width:120px;
+    cursor:pointer;
+}
+
+.menu{
+    position:fixed;
+    top:10;
+    left:-250px;
+    width:250px;
+    background:lightblue;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:80px 20px;
+    transition:0.3s;
+}
+
+.menu.active{
+    left:0;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
 main>h2 {
     display: flex;
     justify-content: center;
@@ -182,13 +213,7 @@ main>h2 {
     margin: 50px 36px;
 
     >a {
-        text-decoration: none;
         color: #7A00C7;
-    }
-
-    >a:hover {
-        text-decoration: underline;
-        cursor: pointer;
     }
 }
 
@@ -584,16 +609,8 @@ footer {
             flex-wrap: nowrap;
             justify-content: space-between;
 
-            >a {
-                text-align: center;
-                font-weight: 300;
-                text-decoration: none;
+            >a {   
                 color: #7A00C7;
-            }
-
-            >a:hover {
-                text-decoration: underline;
-                cursor: pointer;
             }
         }
     }
@@ -609,15 +626,7 @@ footer {
         border-bottom: 1px solid black;
 
         >a {
-            text-align: center;
-            font-weight: 300;
-            text-decoration: none;
             color: #7A00C7;
-        }
-
-        >a:hover {
-            text-decoration: underline;
-            cursor: pointer;
         }
     }
 
@@ -627,10 +636,6 @@ footer {
     }
 }
 
-@media (min-width:600px) {
-    
-}
+@media (min-width:600px) {}
 
-@media (min-width:1024px) {
-    
-}
+@media (min-width:1024px) {}

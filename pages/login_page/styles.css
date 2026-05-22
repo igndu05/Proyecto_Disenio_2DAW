@@ -161,17 +161,10 @@ footer {
             flex-wrap: nowrap;
             justify-content: space-between;
 
-            >a {
-                text-align: center;
-                font-weight: 300;
-                text-decoration: none;
+            >a {    
                 color: #7A00C7;
             }
 
-            >a:hover {
-                text-decoration: underline;
-                cursor: pointer;
-            }
         }
     }
 
@@ -186,15 +179,7 @@ footer {
         border-bottom: 1px solid black;
 
         >a {
-            text-align: center;
-            font-weight: 300;
-            text-decoration: none;
             color: #7A00C7;
-        }
-
-        >a:hover {
-            text-decoration: underline;
-            cursor: pointer;
         }
     }
 

@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../images/Icono_principal.png">
+
+    <script src="../../jq/jquery-4.0.0.js"></script>
+    <script>
+        $(function () {
+            $(".mail > a, .phone > a, .conditions > a").hover(
+                function () {
+                    $(this).css({
+                        "text-decoration": "underline",
+                        "cursor": "pointer"
+                    });
+                },
+                function () {
+                    $(this).css({
+                        "text-decoration": "none"
+                    });
+                }
+            );
+
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -32,14 +54,14 @@
             <h2>Fecha de lanzamiento</h2>
             <div class="product-images">
                 <div class="main-image">
-                    <img src="../../images/Confirmation.webp" alt="imagen">
+                    <img src="../../images/Disco_display.webp" alt="imagen">
                 </div>
                 <div class="secondary-images">
-                    <div class="image"><img src="../../images/Confirmation.webp" alt="imagen"></div>
-                    <div class="image"><img src="../../images/Confirmation.webp" alt="imagen"></div>
-                    <div class="image"><img src="../../images/Confirmation.webp" alt="imagen"></div>
-                    <div class="image"><img src="../../images/Confirmation.webp" alt="imagen"></div>
-                    <div class="image"><img src="../../images/Confirmation.webp" alt="imagen"></div>
+                    <div class="image"><img src="../../images/Disco_display.webp" alt="imagen"></div>
+                    <div class="image"><img src="../../images/Disco_display.webp" alt="imagen"></div>
+                    <div class="image"><img src="../../images/Disco_display.webp" alt="imagen"></div>
+                    <div class="image"><img src="../../images/Disco_display.webp" alt="imagen"></div>
+                    <div class="image"><img src="../../images/Disco_display.webp" alt="imagen"></div>
                 </div>
             </div>
             <h2 class="product-price">29.99€</h2>
