@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/Icono_principal.png">
     <script src="jq/jquery-4.0.0.js"></script>
@@ -21,6 +21,11 @@
 
                 $("#menuHamburguesa").toggleClass("active");
 
+            });
+
+            $("#menuHamburguesa a").on("click", function () {
+                $("#menuHamburguesa").removeClass("active");
+                $("#menu-toggle").prop("checked", false);
             });
 
             $("a").hover(
@@ -52,44 +57,44 @@
         </label>
 
         <div class="icons-header">
-            <a href="./pages/search_page/index.html">
+            <a href="./pages/search_page.html">
                 <img src="./icons/search-icon.svg" alt="icono-busqueda">
             </a>
             <img src="./icons/shopping-cart.svg" alt="icono-carrito">
-            <a href="./pages/login_page/index.html">
+            <a href="./pages/login_page.html">
                 <img src="./icons/profile-icon.svg" alt="icono-perfil">
             </a>
         </div>
     </header>
 
     <nav id="menuHamburguesa" class="menu">
-        <a href="/">ULTIMOS LANZAMIENTOS</a>
-        <a href="/">TOP SELLERS</a>
-        <a href="/">¡EN OFERTA!</a>
-        <a href="/">SOBRE NOSOTROS</a>
+        <a href="#ultimos-lanzamientos">ULTIMOS LANZAMIENTOS</a>
+        <a href="#top-sellers">TOP SELLERS</a>
+        <a href="#oferta">¡EN OFERTA!</a>
+        <a href="#sobre-nosotros">SOBRE NOSOTROS</a>
     </nav>
 
     <main>
         <div class="last-added">
-            <h1>Ultimos lanzamientos</h1>
-            <a href="./pages/product_details/index.html">
+            <h1 id="ultimos-lanzamientos">Ultimos lanzamientos</h1>
+            <a href="./pages/product_details.html">
                 <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
             </a>
         </div>
         <div class="top-seller">
-            <h1>Nuestro top ventas</h1>
-            <a href="./pages/product_details/index.html">
+            <h1 id="top-sellers">Nuestro top ventas</h1>
+            <a href="./pages/product_details.html">
                 <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
             </a>
         </div>
         <div class="offers">
-            <h1>¡En oferta!</h1>
-            <a href="./pages/product_details/index.html">
+            <h1 id="oferta">¡En oferta!</h1>
+            <a href="./pages/product_details.html">
                 <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
             </a>
         </div>
         <div class="about-us">
-            <h1>Sobre nosotros</h1>
+            <h1 id="sobre-nosotros">Sobre nosotros</h1>
             <p>
                 En RetroGroove, estamos dispuestos a ofrecer el mejor trato posible a nuestros clientes,
                 ofreciendoles un amplio catálogo de discos de vinilo al mejor precio del mercado.
