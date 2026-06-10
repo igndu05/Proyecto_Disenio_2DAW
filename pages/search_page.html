@@ -8,38 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/Icono_principal.png">
     <script src="../jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function() {
-            $("#search").on("focusin", function(){
-                $(this).css("border", "3px solid lightgreen")
-            })
-
-            $("#search").on("focusout", function(){
-                $(this).css("border", "1px solid black")
-            })
-
-            $(".mail > a, .phone > a, .conditions > a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-        })
-    </script>
+    <script src="../funciones-javascript/funciones-footer-hover.js"></script>
+    <script src="../funciones-javascript/funciones-buscador.js"></script>
 </head>
 <body>
     <header>
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
-        <div class="icons-header">
+        <div id="icons-header">
             <img src="../icons/search-icon.svg" alt="icono-busqueda">
             <img src="../icons/shopping-cart.svg" alt="icono-carrito">
             <a href="login_page.html">
@@ -49,8 +26,8 @@
     </header>
     
     <main>
-        <div class="search-container">
-            <div class="filter-search">
+        <div id="search-container">
+            <div id="filter-search">
                 <p>Filtrar</p>
                 <a href="search_page_filtered.html">
                     <img src="../icons/filter-icon.svg" alt="filtro-icono">
@@ -58,7 +35,7 @@
             </div>
             <input type="text" name="search" id="search" placeholder="¿Qué buscas?">
         </div>
-        <div class="search-products-container">
+        <div id="search-products-container">
             <a href="product_details.html">
                 <img src="../images/Disco_display.webp" alt="disco de ejemplo">
                 <p>Disco numero 1</p>
@@ -78,34 +55,34 @@
     </main>
 
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="../icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="../icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="../icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="../icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>

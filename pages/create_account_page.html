@@ -8,40 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/Icono_principal.png">
     <script src="../jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function () {
-            $(".mail > a, .phone > a, .conditions > a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-            
-            $("#name, #email, #phone, #username, #passwd").on("focusin", function(){
-                $(this).css("border", "3px solid lightgreen")
-            })
-
-            $("#name, #email, #phone, #username, #passwd").on("focusout", function(){
-                $(this).css("border", "1px solid black")
-            })
-        });
-
-
-    </script>
+    <script src="../funciones-javascript/funciones-footer-hover.js"></script>
+    <script src="../funciones-javascript/funciones-crear-cuenta.js"></script>
 </head>
 <body>
     <header>
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
-        <div class="icons-header">
+        <div id="icons-header">
             <img src="../icons/search-icon.svg" alt="icono-busqueda">
             <img src="../icons/shopping-cart.svg" alt="icono-carrito">
             <a href="#">
@@ -52,19 +27,19 @@
     
     <main>
         <h1>CREAR CUENTA</h1>
-        <div class="form">
+        <div id="form">
             <form action="#" method="post">
-                <div class="name">
+                <div id="name-field">
                     <label for="name">Nombre completo: <span style="color: red;">*</span></label>
                     <input type="text" name="name" id="name">
                 </div>
-                <div class="email">
+                <div id="email-field">
                     <label for="email">Correo electrónico: <span style="color: red;">*</span></label>
                     <input type="text" name="email" id="email">
                 </div>
-                <div class="phone">
+                <div id="phone-field">
                     <label for="phone">Número de teléfono: <span style="color: red;">*</span></label>
-                    <div class="phone-wrapper">
+                    <div id="phone-wrapper">
                         <select name="country">
                         <option value="esp">ESP</option>
                         <option value="eng">ENG</option>
@@ -72,19 +47,19 @@
                     <input type="text" name="phone" id="phone">
                     </div>
                 </div>
-                <div class="username">
+                <div id="username-field">
                     <label for="username">Nombre de usuario: <span style="color: red;">*</span></label>
                     <input type="text" name="username" id="username" placeholder="Ejemplo: username334">
                 </div>
-                <div class="passwd">
+                <div id="passwd-field">
                     <label for="passwd">Contraseña (máx 15 caractéres): <span style="color: red;">*</span></label>
                     <input type="password" name="passwd" id="passwd" maxlength="15">
                 </div>
-                <div class="passwd">
+                <div id="passwd2-field">
                     <label for="passwd2">Confirmar contraseña: <span style="color: red;">*</span></label>
                     <input type="password" name="passwd" id="passwd2" maxlength="15">
                 </div>
-                 <a href="account_created.html" class="login">
+                 <a href="account_created.html" id="login">
                     <p>CREAR CUENTA</p>
                 </a>
             </form>
@@ -92,34 +67,34 @@
     </main>
 
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="../icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="../icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="../icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="../icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>

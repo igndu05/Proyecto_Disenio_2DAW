@@ -5,37 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="login_page.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/Icono_principal.png">
     <script src="../jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function () {
-            $(".mail > a, .phone > a, .conditions > a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-            
-            $("#username, #passwd").on("focusin", function(){
-                $(this).css("border", "3px solid lightgreen")
-            })
-
-            $("#username, #passwd").on("focusout", function(){
-                $(this).css("border", "1px solid black")
-            })
-        });
-
-
-    </script>
+    <script src="../funciones-javascript/funciones-footer-hover.js"></script>
+    <script src="../funciones-javascript/funciones-login.js"></script>
 </head>
 
 <body>
@@ -43,7 +18,7 @@
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
-        <div class="icons-header">
+        <div id="icons-header">
             <img src="../icons/search-icon.svg" alt="icono-busqueda">
             <img src="../icons/shopping-cart.svg" alt="icono-carrito">
             <a href="#">
@@ -53,23 +28,23 @@
     </header>
     <main>
         <h1>INICIO DE SESION</h1>
-        <div class="form">
+        <div id="form">
             <form action="#" method="post">
-                <div class="username">
+                <div id="username-field">
                     <label for="username">Nombre de usuario: <span style="color: red;">*</span></label>
                     <input type="text" name="username" id="username" placeholder="Ejemplo: ViniloEnjoyer65">
                 </div>
-                <div class="passwd">
+                <div id="passwd-field">
                     <label for="passwd">Contraseña (máx 15 caractéres): <span style="color: red;">*</span></label>
                     <input type="password" name="passwd" id="passwd">
                     <a href="#">¿Has olvidado tu contraseña?</a>
                 </div>
-                <a href="#" class="login">
+                <a href="#" id="iniciar-sesion">
                     <p>Iniciar sesion</p>
                 </a>
-                <div class="createAccount-container">
+                <div id="createAccount-container">
                     <h2>¿Aun no tienes una cuenta?</h2>
-                    <a href="create_account_page.html" class="createAccount">
+                    <a href="create_account_page.html" id="createAccount">
                         <p>Crear cuenta</p>
                     </a>
                 </div>
@@ -77,34 +52,34 @@
         </div>
     </main>
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="../icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="../icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="../icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="../icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>

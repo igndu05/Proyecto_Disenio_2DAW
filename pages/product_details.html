@@ -10,34 +10,18 @@
     <link rel="icon" href="../images/Icono_principal.png">
 
     <script src="../jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function () {
-            $(".mail > a, .phone > a, .conditions > a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-
-        });
-
-
-    </script>
+    <script src="../funciones-javascript/funciones-footer-hover.js"></script>
 </head>
 
 <body>
+    <audio id="audio">
+        <source src="../audio-files/audio.mp3" type="audio/mpeg">
+    </audio>
     <header>
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
-        <div class="icons-header">
+        <div id="icons-header">
             <a href="search_page.html">
                 <img src="../icons/search-icon.svg" alt="icono-busqueda">
             </a>
@@ -48,15 +32,15 @@
         </div>
     </header>
     <main>
-        <div class="product-display-container">
+        <div id="product-display-container">
             <h1>Nombre del disco</h1>
             <h1>Nombre del artista</h1>
             <h1>Fecha de lanzamiento</h1>
-            <div class="product-images">
-                <div class="main-image">
+            <div id="product-images">
+                <div id="main-image">
                     <img src="../images/Detalle_Producto_1.webp" alt="imagen">
                 </div>
-                <div class="secondary-images">
+                <div id="secondary-images">
                     <div class="image"><img src="../images/Detalle_Producto_2.webp" alt="imagen"></div>
                     <div class="image"><img src="../images/Detalle_Producto_3.webp" alt="imagen"></div>
                     <div class="image"><img src="../images/Detalle_Producto_4.webp" alt="imagen"></div>
@@ -64,16 +48,16 @@
                     <div class="image"><img src="../images/Detalle_Producto_6.webp" alt="imagen"></div>
                 </div>
             </div>
-            <h2 class="product-price">29.99€</h2>
+            <h2 id="product-price">29.99€</h2>
         </div>
 
-        <div class="buttons-container">
-            <a class="add-to-cart" href="../index.html">AÑADIR AL CARRITO</a>
-            <a class="buy-now" href="payment_page.html">COMPRAR YA</a>
+        <div id="buttons-container">
+            <a id="add-to-cart" href="../index.html">AÑADIR AL CARRITO</a>
+            <a id="buy-now" href="payment_page.html">COMPRAR YA</a>
         </div>
-        
 
-        <div class="product-details-container">
+
+        <div id="product-details-container">
             <h2>Detalles del producto</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -90,7 +74,23 @@
             </p>
         </div>
 
-        <div class="product-opinions-container">
+        <div id="product-demo">
+            <h2>Demo del producto</h2>
+            <p>Aquí tienes una muestra de lo que te puede ofrecer este disco:</p>
+            <div id="audio-demo">
+                <button id="parar"><img src="../icons/stop.svg" alt="stop"></button>
+                <button id="reproducir" class="fa fa-play">
+                    <span id="btnPlay"><img src="../icons/play.svg" alt="play"></span>
+                </button>
+                <button id="restart"><img src="../icons/replay.svg" alt="replay"></button>
+                <button id="volume-down"><img src="../icons/low-volume.svg" alt="low-volume"></button>
+                <button id="volume-up"><img src="../icons/increase-volume.svg" alt="increase-volume"></button>
+            </div>
+        </div>
+
+
+
+        <div id="product-opinions-container">
             <h2>Opiniones del producto</h2>
             <div class="user-opinion">
                 <div class="pfp_name_username">
@@ -149,37 +149,38 @@
         </div>
     </main>
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="../icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="../icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="../icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="../icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>
+    <script src="../funciones-javascript/funciones-reproductor-audio.js"></script>
 </body>
 
 </html>

@@ -9,43 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/Icono_principal.png">
     <script src="jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function () {
-
-            $("#menu-button").on("click", function () {
-
-                $("#menu-toggle").prop(
-                    "checked",
-                    !$("#menu-toggle").prop("checked")
-                );
-
-                $("#menuHamburguesa").toggleClass("active");
-
-            });
-
-            $("#menuHamburguesa a").on("click", function () {
-                $("#menuHamburguesa").removeClass("active");
-                $("#menu-toggle").prop("checked", false);
-            });
-
-            $("a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-
-        });
-
-
-    </script>
+    <script src="./funciones-javascript/funciones-menu.js"></script>
 </head>
 
 <body>
@@ -56,7 +20,7 @@
             <img src="./icons/logo-icon.svg" alt="icono-logo" id="menu-button">
         </label>
 
-        <div class="icons-header">
+        <div id="icons-header">
             <a href="./pages/search_page.html">
                 <img src="./icons/search-icon.svg" alt="icono-busqueda">
             </a>
@@ -67,7 +31,7 @@
         </div>
     </header>
 
-    <nav id="menuHamburguesa" class="menu">
+    <nav id="menuHamburguesa">
         <a href="#ultimos-lanzamientos">ULTIMOS LANZAMIENTOS</a>
         <a href="#top-sellers">TOP SELLERS</a>
         <a href="#oferta">¡EN OFERTA!</a>
@@ -75,25 +39,31 @@
     </nav>
 
     <main>
-        <div class="last-added">
+        <div id="last-added">
             <h1 id="ultimos-lanzamientos">Ultimos lanzamientos</h1>
             <a href="./pages/product_details.html">
-                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
+                <img src="./images/Disco_display.webp" alt="disco de ejemplo">
+                <p>Disco numero 1</p>
+                <p>Precio: <span class="precio">19.99€</span></p>
             </a>
         </div>
-        <div class="top-seller">
+        <div id="top-seller">
             <h1 id="top-sellers">Nuestro top ventas</h1>
             <a href="./pages/product_details.html">
-                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
+                <img src="./images/Disco_menu-home.webp" alt="disco de ejemplo">
+                <p>Disco numero 2</p>
+                <p>Precio: <span class="precio">19.99€</span></p>
             </a>
         </div>
-        <div class="offers">
+        <div id="offers">
             <h1 id="oferta">¡En oferta!</h1>
             <a href="./pages/product_details.html">
-                <img src="./images/Disco_menu-home.webp" alt="disco ejemplo">
+                <img src="./images/Detalle_Producto_1.webp" alt="disco de ejemplo">
+                <p>Disco numero 3</p>
+                <p>Precio: <span class="precio">19.99€</span></p>
             </a>
         </div>
-        <div class="about-us">
+        <div id="about-us">
             <h1 id="sobre-nosotros">Sobre nosotros</h1>
             <p>
                 En RetroGroove, estamos dispuestos a ofrecer el mejor trato posible a nuestros clientes,
@@ -105,42 +75,102 @@
                 estamos para ayudarle en todo lo que usted necesite. *guiño, guiño*.
             </p>
         </div>
-        <div class="contact-us">
+        <div id="video-player">
+
+            <!-- VIDEO -->
+            <video id="video" poster="images/poster.png" muted tabindex="1">
+                <source src="video-files/Video_Retrogroove.mp4" type="video/mp4">
+                <source src="video-files/Video_Retrogroove.webm" type="video/webm">
+            </video>
+
+            <!-- CONTROLES -->
+            <div class="controls">
+                <button id="reproducir">
+                    <img id="btnPlay" class="fa-play" src="./icons/play-icon.svg" alt="icono-play">
+                </button>
+
+                <button id="parar">
+                    <img src="./icons/stop-icon.svg" alt="icono-parar">
+                </button>
+
+                <button id="restart">
+                    <img src="./icons/restart-icon.svg" alt="icono-restart">
+                </button>
+
+                <button id="atras">
+                    <img src="./icons/Minus-5secs-icon.svg" alt="icono-atras">
+                </button>
+
+                <button id="adelante">
+                    <img src="./icons/Plus-5secs-icon.svg" alt="icono-adelante">
+                </button>
+
+                <input type="range" id="barraTiempo" min="0" max="100" value="0">
+
+                <span id="tiempo">
+                    0:00 / 0:00
+                </span>
+
+                <div class="volume-container">
+
+                    <button id="mute">
+                        <img id="btnMute" class="fa-deaf" src="./icons/mute-volume.svg" alt="icono-silenciar-volumen">
+                    </button>
+
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+
+                </div>
+
+                <button id="lento">
+                    <img src="./icons/low-speed.svg" alt="icono-disminuir-velocidad">
+                </button>
+
+                <button id="rapido">
+                    <img src="./icons/increase-speed.svg" alt="icono-incrementar-velocidad">
+                </button>
+
+                <button id="fullscreen">
+                    <img src="./icons/full-screen.svg" alt="icono-pantalla-completa">
+                </button>
+            </div>
+        </div>
+        <div id="contact-us">
             <a href="./pages/contact_form.html">Contactanos aqui</a>
         </div>
     </main>
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="./icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="./icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="./icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="./icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>
+    <script src="./funciones-javascript/funciones-reproductor-video.js"></script>
 </body>
 
 </html>

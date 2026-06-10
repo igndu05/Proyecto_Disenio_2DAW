@@ -9,33 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/Icono_principal.png">
     <script src="../jq/jquery-4.0.0.js"></script>
-    <script>
-        $(function () {
-            $(".mail > a, .phone > a, .conditions > a").hover(
-                function () {
-                    $(this).css({
-                        "text-decoration": "underline",
-                        "cursor": "pointer"
-                    });
-                },
-                function () {
-                    $(this).css({
-                        "text-decoration": "none"
-                    });
-                }
-            );
-            
-            $("input, textarea").on("focusin", function(){
-                $(this).css("border", "3px solid lightgreen")
-            })
-
-            $("input, textarea").on("focusout", function(){
-                $(this).css("border", "1px solid black")
-            })
-        });
-
-
-    </script>
+    <script src="../funciones-javascript/funciones-footer-hover.js"></script>
+    <script src="../funciones-javascript/funciones-formulario-contacto.js"></script>
 </head>
 
 <body>
@@ -43,7 +18,7 @@
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
-        <div class="icons-header">
+        <div id="icons-header">
             <img src="../icons/search-icon.svg" alt="icono-busqueda">
             <img src="../icons/shopping-cart.svg" alt="icono-carrito">
             <a href="login_page.html">
@@ -54,19 +29,19 @@
 
     <main>
         <h1>Formulario de contacto</h1>
-        <div class="form">
+        <div id="form">
             <form action="#" method="post">
-                <div class="full-name">
+                <div id="full-name-field">
                     <label for="name">Nombre completo: <span style="color: red;">*</span></label>
                     <input type="text" name="name" id="name">
                 </div>
-                <div class="email">
+                <div id="email-field">
                     <label for="email">Correo electrónico: <span style="color: red;">*</span></label>
                     <input type="text" name="email" id="email">
                 </div>
-                <div class="phone">
+                <div id="phone-field">
                     <label for="phone">Número de teléfono: <span style="color: red;">*</span></label>
-                    <div class="phone-wrapper">
+                    <div id="phone-wrapper">
                         <select name="country">
                             <option value="esp">ESP</option>
                             <option value="eng">ENG</option>
@@ -74,7 +49,7 @@
                         <input type="text" name="phone" id="phone">
                     </div>
                 </div>
-                <div class="needed-services">
+                <div id="needed-services-field">
                     <label for="service">Servicios necesitados:</label>
                     <select name="service" id="service">
                         <option value="page-error">Error en la página</option>
@@ -82,11 +57,11 @@
                         <option value="refund">Devolución de pedido</option>
                     </select>
                 </div>
-                <div class="message">
+                <div id="message-field">
                     <label for="message">Mensaje:</label>
                     <textarea name="message" id="message"></textarea>
                 </div>
-                <a href="contact_form_created.html" class="login">
+                <a href="contact_form_created.html" id="login">
                     <p>ENVIAR</p>
                 </a>
             </form>
@@ -94,34 +69,34 @@
     </main>
 
     <footer>
-        <div class="social-media">
+        <div id="social-media">
             <p>Nuestras redes sociales</p>
-            <div class="icons-social-media">
+            <div id="icons-social-media">
                 <img src="../icons/Youtube-icon.svg" alt="icono-youtube">
                 <img src="../icons/Twitter-icon.svg" alt="icono-twitter">
                 <img src="../icons/TikTok-icon.svg" alt="icono-tiktok">
                 <img src="../icons/Facebook-icon.svg" alt="icono-facebook">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact">
             <p>Contactanos</p>
-            <div class="mail">
+            <div id="footer-mail">
                 <p>Correo electrónico:</p>
                 <a href="#">inforetrogroove@info.es</a>
             </div>
-            <div class="phone">
+            <div id="footer-phone">
                 <p>Número de teléfono:</p>
                 <a href="#">+34 000 11 22 33</a>
             </div>
         </div>
-        <div class="conditions">
+        <div id="conditions">
             <a href="#">Condiciones de uso y venta</a>
             <a href="#">Aviso de privacidad</a>
             <a href="#">Area legal</a>
             <a href="#">Cookies</a>
             <a href="#">Publicidad basada en intereses</a>
         </div>
-        <div class="copyright">
+        <div id="copyright">
             <p>&copy; 2025, Retrogroove.com, Inc. o sus afiliados</p>
         </div>
     </footer>
