@@ -11,6 +11,7 @@
 
     <script src="../jq/jquery-4.0.0.js"></script>
     <script src="../funciones-javascript/funciones-footer-hover.js"></script>
+    <script src="../funciones-javascript/funciones-menu.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,12 @@
         <source src="../audio-files/audio.mp3" type="audio/mpeg">
     </audio>
     <header>
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" id="hamburger-button">
+            <img src="../icons/hamburger-icon.svg" alt="icono-menu" id="menu-button">
+        </label>
+
         <a href="../index.html">
             <img src="../icons/logo-icon.svg" alt="icono-logo">
         </a>
@@ -31,6 +38,13 @@
             </a>
         </div>
     </header>
+
+    <nav id="menuHamburguesa">
+        <a href="../index.html#ultimos-lanzamientos">ULTIMOS LANZAMIENTOS</a>
+        <a href="../index.html#top-sellers">TOP SELLERS</a>
+        <a href="../index.html#oferta">¡EN OFERTA!</a>
+        <a href="../index.html#sobre-nosotros">SOBRE NOSOTROS</a>
+    </nav>
     <main>
         <div id="product-display-container">
             <h1>Nombre del disco</h1>

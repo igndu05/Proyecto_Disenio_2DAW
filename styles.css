@@ -7,22 +7,18 @@
 
 header {
     border-bottom: 1px solid black;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     padding: 0 16px;
 }
 
-header>a>img {
-    width: 120px;
-    display: block;
-    object-fit: cover;
-}
-
+header>a>img,
 header>img {
     width: 120px;
     display: block;
     object-fit: cover;
+    justify-self: center;
 }
 
 header>#icons-header {
@@ -30,6 +26,7 @@ header>#icons-header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 36px;
+    justify-self: end;
 }
 
 header>#icons-header>a {
@@ -45,9 +42,15 @@ header>#icons-header>a>img {
     display: none;
 }
 
-#menu-button {
-    width: 120px;
+#hamburger-button {
+    justify-self: start;
     cursor: pointer;
+}
+
+#menu-button {
+    width: 40px;
+    display: block;
+    object-fit: cover;
 }
 
 #menuHamburguesa {
