@@ -5,6 +5,26 @@
     font-family: 'Comfortaa', sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+main.centered-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 header {
     border-bottom: 1px solid black;
     display: grid;
@@ -822,7 +842,7 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     background-color: #8BE9FF;
-    margin-top: 160px;
+    margin-top: 180px;
 }
 
 footer>#social-media {
